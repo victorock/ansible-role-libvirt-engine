@@ -1,29 +1,3 @@
-Ansible Libvirt Engine
-=========
-
-Simple Role with Libvirt Modules, Filters and Plugins.
-
-Requirements
-------------
-
-```
-xmltodict >= 0.11.0
-```
-
-Role Variables
---------------
-
-None
-
-Dependencies
-------------
-
-None
-
-Example Playbook
-----------------
-
-```YAML
 - name: "Libvirt Modules, Filters and Plugins"
   hosts: localhost
   connection: local
@@ -49,14 +23,3 @@ Example Playbook
       set_fact:
         xmlspec_libvirt_controller_sata: "{{ libvirt_compute_domain_device_controller_sata | to_xml }}"
     - debug: var=xmlspec_libvirt_controller_sata
-```
-
-License
--------
-
-GPLv3
-
-Author Information
-------------------
-
-Victor da Costa
